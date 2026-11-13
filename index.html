@@ -1,0 +1,14 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#101114"><link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg"><link rel="apple-touch-icon" href="icon-192.png">
+<title>Morph</title><link rel="stylesheet" href="style.css"></head><body><main>
+<h1>Morph</h1><p class="sub">Compress and convert PDFs. Nothing leaves your device.</p>
+<label id="drop"><input type="file" id="file" hidden multiple accept=".pdf,.cbz,.zip,image/*"><b>Choose or drop a file</b><span>PDF, CBZ, ZIP of images, or images</span></label>
+<section id="panel" hidden>
+<div id="info"></div><div id="fmts" role="radiogroup" aria-label="Output format"></div>
+<div class="row"><label id="oq">Quality <output id="qo">70</output>%<input type="range" id="q" min="30" max="95" value="70"></label>
+<label id="od">Resolution<select id="dpi"><option value="72">72 dpi · smallest</option><option value="110" selected>110 dpi · balanced</option><option value="150">150 dpi · sharp</option><option value="200">200 dpi · print</option></select></label></div>
+<button id="go">Convert</button><div id="prog" hidden><i id="bar"></i></div><div id="res"></div></section>
+<p id="msg" role="status"></p></main>
+<script src="lib/jszip.min.js"></script><script src="lib/pdf-lib.min.js"></script><script src="app.js"></script></body></html>

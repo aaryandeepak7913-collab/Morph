@@ -1,0 +1,18 @@
+:root{--bg:#101114;--fg:#ecebe6;--mut:#8b8d94;--ln:#26282e;--ac:#7cf0c4;color-scheme:dark}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 "Avenir Next",Avenir,"Segoe UI",system-ui,sans-serif}
+main{max-width:560px;margin:0 auto;padding:max(28px,env(safe-area-inset-top)) 20px 48px}
+h1{font-size:44px;letter-spacing:-.04em;margin:8px 0 0;font-weight:600}.sub{color:var(--mut);margin:4px 0 28px}
+#drop{display:flex;flex-direction:column;gap:4px;padding:34px 20px;border:1.5px dashed var(--ln);border-radius:18px;cursor:pointer;text-align:center;transition:border-color .2s}
+#drop span{color:var(--mut);font-size:14px}#drop:hover,#drop.on,#drop:focus-within{border-color:var(--ac)}
+#panel{margin-top:22px}#info{color:var(--mut);font-size:14px;margin-bottom:14px;word-break:break-all}#info b{color:var(--fg);font-weight:500}
+#fmts{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+#fmts button{background:none;color:var(--fg);border:1px solid var(--ln);border-radius:12px;padding:12px;text-align:left;font:inherit;font-size:15px;cursor:pointer}
+#fmts button small{display:block;color:var(--mut);font-size:12px}#fmts button[aria-checked=true]{border-color:var(--ac);background:#7cf0c41a}
+#fmts button:disabled{opacity:.35;cursor:not-allowed}
+.row{display:flex;gap:16px;margin:18px 0}.row label{flex:1;display:flex;flex-direction:column;gap:6px;font-size:14px;color:var(--mut)}
+input[type=range]{accent-color:var(--ac);width:100%}select{background:#181a1f;color:var(--fg);border:1px solid var(--ln);border-radius:10px;padding:9px;font:inherit}
+#go{width:100%;background:var(--ac);color:#06130e;border:0;border-radius:14px;padding:15px;font:600 16px inherit;cursor:pointer}#go:disabled{opacity:.5}
+#prog{height:4px;background:var(--ln);border-radius:4px;margin-top:14px;overflow:hidden}#bar{display:block;height:100%;width:0;background:var(--ac);transition:width .15s}
+#res{margin-top:16px}#res a{display:block;text-align:center;padding:14px;border:1px solid var(--ac);border-radius:14px;color:var(--ac);text-decoration:none;font-weight:600;word-break:break-all}
+#res p{color:var(--mut);font-size:14px;margin:0 0 10px;text-align:center}#msg{color:#ff9a8a;text-align:center;font-size:14px}
+:focus-visible{outline:2px solid var(--ac);outline-offset:2px}[hidden]{display:none!important}
